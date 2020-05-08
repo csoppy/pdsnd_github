@@ -10,6 +10,8 @@ months = ['january', 'february', 'march', 'april', 'may', 'june']
 days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 allstr = ['all']
 
+
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -43,6 +45,7 @@ def get_filters():
     return city, month, day
 
 
+
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
@@ -64,7 +67,6 @@ def load_data(city, month, day):
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
 
-
     # filter by month if applicable
     if month != 'all':
         # use the index of the months list to get the corresponding int
@@ -79,6 +81,7 @@ def load_data(city, month, day):
         df = df[df['day_of_week'] == day.title()]
 
     return df
+
 
 
 def time_stats(df):
@@ -104,6 +107,7 @@ def time_stats(df):
     print('-'*40)
 
 
+
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
     print('\nCalculating The Most Popular Stations and Trip...\n')
@@ -125,6 +129,7 @@ def station_stats(df):
     print('-'*40)
 
 
+
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
     print('\nCalculating Trip Duration...\n')
@@ -140,6 +145,7 @@ def trip_duration_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
+
 
 
 def user_stats(df):
@@ -177,6 +183,7 @@ def user_stats(df):
     print('-'*40)
 
 
+
 def show_raw_data(df):
     i = 0
     answer = input('Would you like to see the raw data? (yes/no) ')
@@ -188,6 +195,7 @@ def show_raw_data(df):
             if more.lower() != 'yes':
                 break
         print("Okay, I'll stop showing you raw data now.")
+
 
 
 def main():
@@ -204,6 +212,7 @@ def main():
         restart = input('\nWould you like to restart? (yes/no)\n')
         if restart.lower() != 'yes':
             break
+
 
 
 if __name__ == "__main__":
