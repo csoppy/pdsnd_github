@@ -13,6 +13,7 @@ allstr = ['all']
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
+    If user gives unexpected input, repeat the options.
 
     Returns:
         (str) city - name of the city to analyze
