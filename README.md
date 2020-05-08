@@ -9,8 +9,10 @@ In this project, you will make use of Python to explore data related to bike sha
 
 ### Files used
 bikeshare.py
+
 README.md
 
 ### Credits
 pandas documentation - https://pandas.pydata.org/pandas-docs/stable/
+
 The Python Standard Library - https://docs.python.org/3/library/
